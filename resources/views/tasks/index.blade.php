@@ -76,6 +76,7 @@
                                         </select>
                                         <input type="hidden" name="taskname" value="{{ $task -> taskname }}">
                                         <input type="hidden" name="assigned_to" value="{{ $task -> assigned_to }}">
+                                        {{-- <input type="hidden" name="id" value="{{ $task->id }}"> --}}
                                     </form>
                                 </td>
                             @else
