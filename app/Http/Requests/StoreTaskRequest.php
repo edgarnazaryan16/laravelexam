@@ -33,7 +33,6 @@ class StoreTaskRequest extends FormRequest
                     if(!User::where('id', $value)->where('role', 'developer')->first()) {
                         $fail("User Id doesn't exist or user doesn't developer");
                     }
-
                 }
             ],
         ];

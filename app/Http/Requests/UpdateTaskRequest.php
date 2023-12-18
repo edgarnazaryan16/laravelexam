@@ -29,7 +29,7 @@ class UpdateTaskRequest extends FormRequest
             'assigned_to' => [
                 'required',
                 function($attributes, $value, $fail) {
-                    if(Task::find(explode('/', request()->requestUri)[2])->assigned_to !== $value) {
+                    if((int)Task::find(explode('/', request()->requestUri)[2])->assigned_to !== (int)$value) {
                         $fail("You don't have a permission");
                     }
                 }

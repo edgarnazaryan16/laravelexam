@@ -77,6 +77,9 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
+        if($task->created_by !== auth()->user()->id) {
+            return redirect('tasks');
+        }
         $developers = User::where('role', 'developer')->pluck('username', 'id');
         return view('tasks.edit', compact('task', 'developers'));
     }

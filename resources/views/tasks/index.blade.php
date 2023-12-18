@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header card-title">
                   <div class="d-flex align-items-center">
-                    <h2 class="mb-0">All Contacts</h2>
+                    <h2 class="mb-0">All Tasks</h2>
                     @if (auth()->user()->role === 'manager')
                         <div class="ml-auto">
                         <a href="{{ route('tasks.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add New</a>
